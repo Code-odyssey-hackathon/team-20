@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 6% 10%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+    --neon-mint: 0 0% 98%; /* Replaced with generic white to avoid breaking components */
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 240 5% 84%;
+    --radius: 0.5rem;
+
+    --gradient-hero: transparent;
+    --gradient-neon: transparent;
+    --gradient-card: transparent;
+    --gradient-text: none;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  ::selection {
+    background: hsl(var(--muted));
+    color: hsl(var(--foreground));
+  }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Override cyberpunk utilities with modern clean styles */
+  .text-gradient-neon {
+    background: linear-gradient(120deg, oklch(88% 0.16 95), oklch(78% 0.18 65));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass-panel {
+    @apply bg-card border border-border;
+  }
+
+  .neon-border {
+    @apply border border-border rounded-xl;
+  }
+  
+  .grid-bg {
+    background-image: none;
+  }
+}
+
+@layer utilities {
+  .glow-cyan { box-shadow: none; }
+  .glow-pink { box-shadow: none; }
+  .glow-purple { box-shadow: none; }
+  .text-shadow-neon { text-shadow: none; }
+  
+  .anim-drip::after { content: none; }
+  .anim-flicker { animation: none; }
+  .anim-spin-slow { animation: spin 2s linear infinite; }
+  .anim-shake { animation: none; }
+  .anim-float-up { animation: none; }
+  .anim-grow { animation: none; }
+  .anim-wiggle { animation: none; }
+  .anim-pulse-ring { animation: none; }
+}
