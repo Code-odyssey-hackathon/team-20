@@ -1,4 +1,9 @@
-# 🛡️ FunCode: The Multilingual Coding Odyssey
+# 🛡️ FunCode: The Coding Odyssey
+
+Team : Quad core   
+Team number:20 
+Problem Statement: Current learning platforms fall short in keeping learners engaged because learning, most of the time, is theoretical, repetitive, and not emotionally engaging. We propose an interactive web-based platform that combines play, storytelling, and coding challenges into a single learning experience- FUNCODE.
+
 
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
