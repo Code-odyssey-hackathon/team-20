@@ -1,7 +1,8 @@
 # 🛡️ FunCode: The Coding Odyssey
 
 Team : Quad core   
-Team number:20 
+Team number:20
+
 Problem Statement: Current learning platforms fall short in keeping learners engaged because learning, most of the time, is theoretical, repetitive, and not emotionally engaging. We propose an interactive web-based platform that combines play, storytelling, and coding challenges into a single learning experience- FUNCODE.
 
 
