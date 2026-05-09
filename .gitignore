@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment Variables (CRITICAL: Do not commit API keys)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# Temporary Test Scripts
+test-*.js
+
+# Testing and Coverage
+coverage/
+.temp/
