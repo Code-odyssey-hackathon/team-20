@@ -1,11 +1,11 @@
-# 🛡️ Code Quest Arena: The Prime Compiler of Kailasa
+# 🛡️ FunCode: 
 
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Groq](https://img.shields.io/badge/AI-Groq%20Llama%203.3-orange?style=for-the-badge)](https://groq.com/)
 [![Supabase](https://img.shields.io/badge/Database-Supabase-blueviolet?style=for-the-badge&logo=supabase)](https://supabase.com/)
 
-**Code Quest Arena** is an immersive, AI-driven gamified learning platform that transforms C programming into a high-stakes adventure. Set in the mystical ruins of Kailasa, it challenges users to solve dynamically generated puzzles, master the "Prime Compiler," and climb the global ranks through narrative story modes and competitive arenas.
+**FunCode** is an immersive, AI-driven learning platform that transforms C programming into a high-stakes adventure. Set in the mystical ruins of Kailasa, it challenges users to solve dynamically generated puzzles, master the "Prime Compiler," and climb the global ranks through narrative story modes and competitive arenas.
 
 ---
 
@@ -18,7 +18,7 @@ Embark on a massive 10-Act journey. Navigate a realistic 4K 3D treasure map wher
 *   **Animated Progression**: Watch your avatar travel through jungles, temples, and peaks with smooth SVG-path animations.
 
 ### 🤖 AI "Strict Compiler" Evaluation
-Move beyond multiple-choice questions. 
+Move beyond simple multiple-choice questions. 
 *   **Real-time Review**: Submit actual C code in a full-screen, low-latency editor.
 *   **Interactive Insights**: The AI acts as a digital mentor, providing specific logic hints and compilation insights instead of just "Correct/Incorrect."
 *   **Optimized Performance**: High-speed inference via **Groq**, optimized to minimize API costs and maximize response speed.
@@ -59,7 +59,7 @@ A centralized hub to track your rise through the ranks.
 1.  **Clone the Repo**
     ```bash
     git clone https://github.com/Code-odyssey-hackathon/team-20.git
-    cd code-quest-arena
+    cd funcode
     ```
 
 2.  **Install Dependencies**
