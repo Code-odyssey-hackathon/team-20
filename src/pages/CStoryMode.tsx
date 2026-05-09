@@ -10,8 +10,11 @@ import { ArrowLeft, Loader2, Send, Bot, Map as MapIcon, BookOpen, Play, X } from
 import { generateStoryChallenge, type StoryChallenge, evaluateCodeSubmission } from "@/lib/gemini";
 import { C_ACTS, C_TREASURE_HUNT_PROLOGUE, getLevelBeat, getStoryProgressSummary } from "@/lib/c_story";
 import { NarratorDialog } from "@/components/funcode/NarratorDialog";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function CStoryMode() {
+  const { user } = useAuth();
   const nav = useNavigate();
   const SOLVED_KEY = "cStoryMode:solved";
   
@@ -75,6 +78,29 @@ export default function CStoryMode() {
     
     // Level Up Animation Sequence
     setIsMapOpen(true); // Open the map overlay
+    
+    // Reward XP in Supabase
+    if (user) {
+      (async () => {
+        const xpReward = 100;
+        const { data: profile } = await supabase.from("profiles").select("total_xp").eq("id", user.id).single();
+        if (profile) {
+          const newXp = (profile.total_xp || 0) + xpReward;
+          const newLevel = Math.floor(newXp / 500) + 1;
+          await supabase.from("profiles").update({ total_xp: newXp, level: newLevel }).eq("id", user.id);
+          
+          // Also record a match for the dashboard history
+          await supabase.from("matches").insert({
+            user_id: user.id,
+            score: 1,
+            correct_count: 1,
+            total_questions: 1,
+            xp_earned: xpReward,
+            topic_id: null, // C Story Mode specific
+          });
+        }
+      })();
+    }
     
     // Wait for map to render, then trigger movement
     setTimeout(() => {

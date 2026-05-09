@@ -77,8 +77,8 @@ const Dashboard = () => {
             <StatCard icon={Target} label="Accuracy" value={`${stats.accuracy}%`} accent="text-secondary" />
             <StatCard 
               icon={MapIcon} 
-              label="C Story Progress" 
-              value={`${parseInt(localStorage.getItem('cStoryMode:solved') || '0', 10)}/100`} 
+              label="C Story Mode" 
+              value={`Level ${parseInt(localStorage.getItem('cStoryMode:solved') || '0', 10) + 1}`} 
               accent="text-[hsl(var(--neon-mint))]" 
             />
           </div>
